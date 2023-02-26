@@ -37,6 +37,7 @@
 #include "esp_task.h"
 #include "soc/cpu.h"
 #include "esp_log.h"
+#include "driver/gpio.h"
 
 #if CONFIG_IDF_TARGET_ESP32
 #include "esp32/spiram.h"
@@ -231,6 +232,7 @@ void boardctrl_startup(void) {
 }
 
 void app_main(void) {
+    gpio_set_level(GPIO_NUM_27,1);
     // Hook for a board to run code at start up.
     // This defaults to initialising NVS.
     MICROPY_BOARD_STARTUP();

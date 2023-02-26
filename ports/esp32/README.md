@@ -96,23 +96,7 @@ Then to build MicroPython for the ESP32 run:
 ```bash
 $ cd ports/esp32
 $ make submodules
-$ make
-```
-
-This will produce a combined `firmware.bin` image in the `build-GENERIC/`
-subdirectory (this firmware image is made up of: bootloader.bin, partitions.bin
-and micropython.bin).
-
-To flash the firmware you must have your ESP32 module in the bootloader
-mode and connected to a serial port on your PC.  Refer to the documentation
-for your particular ESP32 module for how to do this.
-You will also need to have user permissions to access the `/dev/ttyUSB0` device.
-On Linux, you can enable this by adding your user to the `dialout` group, and
-rebooting or logging out and in again. (Note: on some distributions this may
-be the `uucp` group, run `ls -la /dev/ttyUSB0` to check.)
-
-```bash
-$ sudo adduser <username> dialout
+2C
 ```
 
 If you are installing MicroPython to your module for the first time, or
